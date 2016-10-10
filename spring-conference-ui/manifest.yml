@@ -1,8 +1,0 @@
----
-applications:
-- name: toronto-spring-conference
-  memory: 1024MB
-  instances: 3
-  host: toronto-spring-conference
-  path: target/spring-conference-ui.jar
-  buildpack: java_buildpack
