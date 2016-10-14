@@ -1,11 +1,13 @@
 echo "Clean and Package the Application"
 mvn clean package
-echo ""	
+echo ""
 
+DOMAIN2=caledonhillsracing.com
 DOMAIN=cfapps.io
-ORIGINAL_APP=toronto-spring-conference
-NEW_APP=toronto-spring-conference-new
-OLD_APP=toronto-spring-conference-old
+ORIGINAL_WWW=www
+ORIGINAL_APP=chr
+NEW_APP=chr-new
+OLD_APP=chr-old
 
 # push the application with a manifest that binds all required services
 echo "**Pushing the 'New' Service with a route different than the currently running one"
@@ -31,20 +33,24 @@ echo ""
 
 # scale up the new app instance
 echo "**Scaling Up The New Application To Handle Load Of Currently Running Application"
-echo "cf scale $NEW_APP -i 3"
-cf scale $NEW_APP -i 3
+echo "cf scale $NEW_APP -i 2"
+cf scale $NEW_APP -i 2
 echo ""
 
 # start directing traffic to the new app instance
 echo "**Move Traffic (PCF Route) from the Currently Running App to the new one"
 echo "cf map-route $NEW_APP $DOMAIN -n $ORIGINAL_APP"
 cf map-route $NEW_APP $DOMAIN -n $ORIGINAL_APP
+cf map-route $NEW_APP $DOMAIN2 -n $ORIGINAL_WWW
+cf map-route $NEW_APP $DOMAIN2
 echo ""
 
 # stop taking traffic on the current prod instance
 echo "**Unmap the Current Application So No More Traffic Reaches It (going to the new one now)"
 echo "cf unmap-route $ORIGINAL_APP $DOMAIN -n $ORIGINAL_APP"
 cf unmap-route $ORIGINAL_APP $DOMAIN -n $ORIGINAL_APP
+cf unmap-route $ORIGINAL_APP $DOMAIN2 -n $ORIGINAL_WWW
+cf unmap-route $ORIGINAL_APP $DOMAIN2
 echo ""
 
 # scale down the proi app instances
@@ -75,7 +81,13 @@ echo "cf unmap-route $NEW_APP $DOMAIN -n $NEW_APP"
 cf unmap-route $NEW_APP $DOMAIN -n $NEW_APP
 echo ""
 
+
 # rename the app
 echo "**Rename the app so naming makes sense in the Console"
 echo "cf rename $NEW_APP $ORIGINAL_APP"
 cf rename $NEW_APP $ORIGINAL_APP
+
+# delete any version of the old app that might be lying around still
+echo "**Delete any old back up versions of the application (from a previous blue green)"
+echo "cf delete $OLD_APP -f"
+cf delete $OLD_APP -f
