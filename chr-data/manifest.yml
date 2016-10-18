@@ -1,0 +1,7 @@
+applications:
+- name: chr-data
+  memory: 1024MB
+  instances: 1
+  host: chr-data
+  path: target/chr-data-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
