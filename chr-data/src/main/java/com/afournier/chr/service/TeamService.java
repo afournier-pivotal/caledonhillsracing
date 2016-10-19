@@ -28,8 +28,8 @@ public class TeamService {
 		return teamRepo.findOne(id);
 	}
 	
-	public void saveTeam(String firstname, String lastname, String email, String bio) {
-		teamRepo.save(new Team(firstname, lastname, email,bio) );
+	public void saveTeam(String firstname, String lastname, String email, String bio, String picture) {
+		teamRepo.save(new Team(firstname, lastname, email, bio, picture) );
 	}
 
 	

@@ -14,7 +14,33 @@
 
     <ul>
         <li ng-repeat="x in persons">
-            {{ x.id + ', ' + x.firstname + ', ' + x.lastname + ', ' + x.email + ', ' + x.bio }}
+            {{ x.id + ', ' + x.firstname + ', ' + x.lastname + ', ' + x.email + ', ' + x.bio + ', ' + x.picture }}
+            
+                                              <div class="width2 isotope-item animation-default-ux animation-scroll-ux fadeined">
+                                                                        <div class="inside card" style="padding: 40px 0 0 40px;">
+                                                                            <div class="team-item">
+                                                                                <div class="img-wrap">
+                                                                                	                                                                                
+                                                                                    <img src="img/{{x.picture}}" class="team-img wp-post-image">                              
+                                                                                </div>
+                                                                                <div class="team-item-con-back">
+                                                                                    <div class="team-item-con-back-inn">
+                                                                                        <a class="team-item-title" title="Name" href="#">{{x.firstname + ' ' + x.lastname}}</a>
+                                                                                        <div class="team-item-con-h">
+                                                                                            <p class="team-position">{{x.bio}}</p>
+                                                                                            <p class="team-email">{{x.email}}</p>
+                                                                                        </div>
+                                                                                        <!-- 
+                                                                                        <p class="team-icons">
+                                                                                            <a href=""> <i class="fa fa-github-square"></i></a>
+                                                                                            <a href="#"> <i class="fa fa-twitter-square"></i></a>
+                                                                                        </p>
+                                                                                         -->
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
         </li>
     </ul>
 

@@ -21,15 +21,17 @@ public class Team implements Serializable {
 	private String lastname;
 	private String email;
 	private String bio;
+	private String picture;
 	
 	public Team() {}
 
-	public Team(String firstname, String lastname, String email, String bio) {
+	public Team(String firstname, String lastname, String email, String bio, String picture) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 		this.bio = bio;
+		this.picture = picture;
 	}
 	
 	public Long getId() {
@@ -67,4 +69,10 @@ public class Team implements Serializable {
 		this.bio = bio;
 	}
 
+	public String getPicture() {
+		return picture;
+	}
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
 }

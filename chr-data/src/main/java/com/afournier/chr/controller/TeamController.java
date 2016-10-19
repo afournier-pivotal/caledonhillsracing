@@ -42,9 +42,9 @@ public class TeamController {
 		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 	
-	@RequestMapping(method = RequestMethod.POST,value="/newTeam/{firstname}/{lastname}/{email}/{bio}")
-	public void submitTeam(@PathVariable String firstname, @PathVariable String lastname,@PathVariable String email, @PathVariable String bio) {
-		teamService.saveTeam(firstname, lastname, email, bio);
+	@RequestMapping(method = RequestMethod.POST,value="/newTeam/{firstname}/{lastname}/{email}/{bio}/{picture}")
+	public void submitTeam(@PathVariable String firstname, @PathVariable String lastname,@PathVariable String email, @PathVariable String bio, @PathVariable String picture) {
+		teamService.saveTeam(firstname, lastname, email, bio, picture);
 		
 	}
 	
