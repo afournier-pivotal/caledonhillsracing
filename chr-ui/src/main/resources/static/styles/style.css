@@ -1891,7 +1891,11 @@ h3#reply-title small, #comments .nav-tabs li.active h3#reply-title .logged,#comm
 /* Sidebar widget*/
 /*Sidebar Widget BG Color*/
 #sidebar-widget {
+<<<<<<< HEAD
   background-color:#323032; 
+=======
+  background-color:#373737; 
+>>>>>>> 252ec15d1eabd4ed4bfa137c19e6d61c8045301a
 }
 
 /*Sidebar Widget Title Color*/
