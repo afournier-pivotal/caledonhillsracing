@@ -1,0 +1,26 @@
+[
+    {
+        "_class": "com.caledonhillsracing.CyclistBio",
+        "firstName": "Sean",
+        "lastName:": "Bechtel",
+        "age": "33",
+        "homeTown": "Caledon",
+        "cyclingSpecialties": "Diminishing other people’s confidence",
+        "favoriteSong": "Wheels on the Bus",
+        "favoriteCyclingEvent": "Any event I can win",
+        "favoriteFood": "Plain Burger and Fries",
+        "cyclingIcon": "My Wife"
+    },
+    {
+        "_class": "com.caledonhillsracing.CyclistBio",
+        "firstName": "Scott",
+        "lastName:": "Beffort",
+        "age": "43",
+        "homeTown": "Caledon",
+        "cyclingSpecialties": "Climbing & Annoying Bill",
+        "favoriteSong": "Too many to choose just one",
+        "favoriteCyclingEvent": "Tour de France",
+        "favoriteFood": "Pasta (with wine)",
+        "cyclingIcon": "Romain Bardet (Current), Eddy Merckx (All Time)"
+    }
+]

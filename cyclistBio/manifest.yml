@@ -1,0 +1,6 @@
+---
+applications:
+- name: cyclistbio
+  memory: 512M
+  host: cyclistbio
+  path: /Users/adamfournier/Downloads/cyclistBio/target/cyclistBio-0.0.1.jar
