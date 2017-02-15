@@ -1,1 +1,0 @@
-CREATE TABLE cyclist (id int not null auto_increment, firstname varchar(50), lastname varchar(80), age smallint, hometown varchar(50), cyclingspecialties varchar(255), favoritesong varchar(255), favoritecyclingevent varchar(255),favoritefood varchar(255),cyclingicon varchar(100), PRIMARY KEY (id));
