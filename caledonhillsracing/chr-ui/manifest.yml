@@ -1,0 +1,7 @@
+applications:
+- name: chr
+  memory: 1024MB
+  instances: 2
+  host: chr
+  path: target/chr-ui.jar
+  buildpack: java_buildpack
