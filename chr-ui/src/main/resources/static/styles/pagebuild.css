@@ -1537,6 +1537,27 @@ a.team-item-title{
 .moudle .team-item-title,.moudle .team-icons i,.moudle .team-position{
 	color:#fff; color: rgba(255,255,255,0.7);
 }
+.moudle .team-item-title,.moudle .team-icons i,.moudle .team-age{
+	color:#fff; color: rgba(255,255,255,0.7);
+}
+.moudle .team-item-title,.moudle .team-icons i,.moudle .team-hometown{
+	color:#fff; color: rgba(255,255,255,0.7);
+}
+.moudle .team-item-title,.moudle .team-icons i,.moudle .cyclingSpecialties{
+	color:#fff; color: rgba(255,255,255,0.7);
+}
+.moudle .team-item-title,.moudle .team-icons i,.moudle .favoriteSong{
+	color:#fff; color: rgba(255,255,255,0.7);
+}
+.moudle .team-item-title,.moudle .team-icons i,.moudle .favoriteCyclingEvent{
+	color:#fff; color: rgba(255,255,255,0.7);
+}
+.moudle .team-item-title,.moudle .team-icons i,.moudle .favoriteFood{
+	color:#fff; color: rgba(255,255,255,0.7);
+}
+.moudle .team-item-title,.moudle .team-icons i,.moudle .cyclingIcon{
+	color:#fff; color: rgba(255,255,255,0.7);
+}
 .moudle .team-email,.moudle .team-phone{
 	color:#fff; color:rgba(255,255,255,0.4);
 }
